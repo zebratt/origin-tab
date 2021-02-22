@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import { SWRConfig } from 'swr';
 
 // css
-import '@/styles/common.css';
+import '@/styles/tailwind.css';
 
 // modules
 import HomePage from '@/pages/home';
@@ -14,7 +15,14 @@ ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<PageLoading />}>
       <ErrorBoundary fallback={<PageError />}>
-        <HomePage />
+        <SWRConfig
+          value={{
+            revalidateOnFocus: false,
+            shouldRetryOnError: false,
+          }}
+        >
+          <HomePage />
+        </SWRConfig>
       </ErrorBoundary>
     </Suspense>
   </React.StrictMode>,
