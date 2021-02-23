@@ -16,7 +16,7 @@ const RepoItem = (props: RepoItemProps) => {
   return (
     <div className="border rounded border-grey-2 mb-2 flex text-xs">
       <div className="w-1/5 pl-4">
-        <a className="text-blue-500" href={html_url}>
+        <a className="text-blue-500" target="_blank" href={html_url}>
           {name}
         </a>
       </div>
