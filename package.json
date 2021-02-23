@@ -6,6 +6,7 @@
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@octokit/core": "^3.2.5",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

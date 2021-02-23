@@ -19,6 +19,7 @@ ReactDOM.render(
           value={{
             revalidateOnFocus: false,
             shouldRetryOnError: false,
+            dedupingInterval: 10000
           }}
         >
           <Scaffold />
