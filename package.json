@@ -4,7 +4,8 @@
     "build": "snowpack build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
-    "deploy": "cp -f -R chrome/* build"
+    "deploy": "cp -f -R chrome/* build",
+    "bd": "yarn build && yarn deploy"
   },
   "dependencies": {
     "@octokit/core": "^3.2.5",

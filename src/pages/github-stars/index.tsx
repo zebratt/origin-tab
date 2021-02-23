@@ -14,7 +14,7 @@ const RepoItem = (props: RepoItemProps) => {
   const { name, html_url, description, author, stargazers_count } = props;
 
   return (
-    <div className="border rounded border-grey-2 mb-2 flex">
+    <div className="border rounded border-grey-2 mb-2 flex text-xs">
       <div className="w-1/5 pl-4">
         <a className="text-blue-500" href={html_url}>
           {name}

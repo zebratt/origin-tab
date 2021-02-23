@@ -7,7 +7,7 @@ const SidebarItem = ({ title, path }: { title: string; path: string }) => {
 
   return (
     <div
-      className="py-4 border-b border-grey-2 text-center cursor-pointer hover:bg-grey hover:text-white"
+      className="py-3 border-b border-grey-2 text-center cursor-pointer text-xs hover:bg-grey hover:text-white"
       onClick={() => {
         navigate(path);
       }}
