@@ -1,4 +1,5 @@
 import React from 'react';
+import type { StarredRepoItem } from './interface';
 import { fetchGithubStars } from './service';
 
 interface RepoItemProps {
@@ -15,7 +16,9 @@ const RepoItem = (props: RepoItemProps) => {
   return (
     <div className="border rounded border-grey-2 mb-2 flex">
       <div className="w-1/5 pl-4">
-        <a className="text-blue-500" href={html_url}>{name}</a>
+        <a className="text-blue-500" href={html_url}>
+          {name}
+        </a>
       </div>
       <div className="flex-1">{description}</div>
       <div className="w-32">{author}</div>
@@ -25,7 +28,7 @@ const RepoItem = (props: RepoItemProps) => {
 };
 
 const GithubStarsPage = () => {
-  const { data } = fetchGithubStars();
+  const data = fetchGithubStars<StarredRepoItem[]>();
 
   return (
     <div>

@@ -3,7 +3,8 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "deploy": "cp -f -R chrome/* build"
   },
   "dependencies": {
     "@octokit/core": "^3.2.5",

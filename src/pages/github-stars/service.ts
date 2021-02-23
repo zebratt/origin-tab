@@ -1,30 +1,11 @@
-import { Octokit } from '@octokit/core';
 import useSWR from 'swr';
-import { gh_token } from '@/constants';
-import { SWRKey } from '@/constants/swr-keys';
+import { fetcher } from '@/utils/fetcher';
 
-const octokit = new Octokit({
-  auth: gh_token,
-});
-
-export function fetchGithubStars() {
+export function fetchGithubStars<T>(): T {
   const { data } = useSWR(
-    SWRKey.GITHUB_STARS,
-    () =>
-      octokit.request('GET /user/starred', {
-        per_page: 100,
-      }),
-    { suspense: true, dedupingInterval: 60000 },
-  );
-
-  return data!;
-}
-
-export function fetchGithubUser() {
-  const { data } = useSWR(
-    SWRKey.GITHUB_USER_INFO,
-    () => octokit.request('GET /user'),
-    { suspense: true, dedupingInterval: 60000 },
+    '//api.github.com/users/zebratt/starred?per_page=100',
+    fetcher(),
+    { suspense: true, dedupingInterval: 3600 * 1000 },
   );
 
   return data!;

@@ -1,0 +1,16 @@
+{
+  "name": "Origin Tab",
+  "description": "New tab for chrome",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "16": "/images/cycle_16.png",
+    "32": "/images/cycle_32.png",
+    "48": "/images/cycle_48.png",
+    "128": "/images/cycle_128.png"
+  }
+}
