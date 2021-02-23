@@ -4,8 +4,8 @@ Personal chrome new tab extension
 
 ### features
 
-- list hot juejin articles
 - list my stared github repos
+- navigation to forums
 
 ### todo
 

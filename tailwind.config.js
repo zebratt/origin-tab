@@ -5,7 +5,16 @@ module.exports = {
   purge: ['./src/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        grey: {
+          DEFAULT: '#AAA',
+          1: '#F2F3F6',
+          2: '#E6E9ED',
+        },
+        white: '#FFF',
+      },
+    },
   },
   variants: {
     extend: {},

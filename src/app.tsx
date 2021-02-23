@@ -6,10 +6,10 @@ import { SWRConfig } from 'swr';
 import '@/styles/tailwind.css';
 
 // modules
-import HomePage from '@/pages/home';
-import ErrorBoundary from '@/components/error-boundary';
-import PageError from '@/components/page-error';
-import PageLoading from '@/components/page-loading';
+import ErrorBoundary from './components/error-boundary';
+import PageError from './components/page-error';
+import PageLoading from './components/page-loading';
+import Scaffold from './components/scaffold';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,7 +21,7 @@ ReactDOM.render(
             shouldRetryOnError: false,
           }}
         >
-          <HomePage />
+          <Scaffold />
         </SWRConfig>
       </ErrorBoundary>
     </Suspense>

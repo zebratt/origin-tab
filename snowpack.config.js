@@ -1,21 +1,18 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: {url: '/', static: true},
-    src: {url: '/dist'},
+    public: { url: '/', static: true },
+    src: { url: '/dist' },
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-typescript',
-    '@snowpack/plugin-postcss'
+    '@snowpack/plugin-postcss',
   ],
   alias: {
-    "@": "./src"
+    '@': './src',
   },
-  routes: [
-    /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
   optimize: {
     /* Example: Bundle your final build: */
     // "bundle": true,
